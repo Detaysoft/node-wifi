@@ -1,6 +1,6 @@
 const command = () => ({
-  cmd: 'sudo',
-  args: ['/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport', '--getinfo']
+  cmd: '/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport',
+  args: ['--getinfo']
 });
 
 module.exports = command;
