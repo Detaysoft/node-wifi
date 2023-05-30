@@ -1,9 +1,12 @@
-const { execFile } = require('child_process');
+// const { execFile } = require('child_process');
+const sudo = require('sudo-prompt');
+
 const env = require('../env');
 
 module.exports = ({ cmd, args }) =>
   new Promise((resolve, reject) => {
-    execFile(cmd, args, { env }, (error, output) => {
+    console.log(cmd, 'node wifi cmd');
+    sudo.exec(cmd, args, { env }, (error, output) => {
       if (error) {
         reject(error);
       } else {
